@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'facebookmessages')}">
+
+<body>
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>This is a Facebook messages page</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div th:each="map:${messages}">
+        <div th:each="mapEntry:${map}">
+            <span th:text="${mapEntry.key}"></span>
+            <span th:text="${mapEntry.value.message}"></span>
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'logs')}">
+
+<body>
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>This is a log page for <span th:text="${botName}"> </span> logger </h1>
+    </div>
+</div>
+
+<div class="container">
+    <div th:each="log:${botLogs}">
+        <span th:text="${log.getDate()}"></span>
+        <span th:text="${log.getValue()}"></span>
+    </div>
+</div>
+</body>
