@@ -72,7 +72,7 @@ public class TelegramBot extends TelegramLongPollingBot{
         String returnMessage;
         addNewChatIfnotExist(update);
         if (msg.equals(START_BOT_COMMAND)){
-            returnMessage= "Hello! A am Tel-Ran Github CVBank repo bot (https://github.com/EvgenySerg/CVBank2018)! Type /echo {string} to get bot echo";
+            returnMessage= "Hello! A am Tel-Ran Github CVBank repo bot (https://github.com/TRCVBANK/BACK)! Type /echo {string} to get bot echo";
         }
         else if (msg.startsWith(ECHO_BOT_COMMAND)){
             returnMessage= msg.replaceFirst(ECHO_BOT_COMMAND, "");
@@ -98,7 +98,7 @@ public class TelegramBot extends TelegramLongPollingBot{
     public String getBotUsername() {
         return "githubCommitsNotifybot";
     }
-
+//657815538:AAGzXI9keb8SffIcfAAgfZRkjuQDG1HBj7c
     @Override
     public String getBotToken() {
         return "657815538:AAGzXI9keb8SffIcfAAgfZRkjuQDG1HBj7c";
